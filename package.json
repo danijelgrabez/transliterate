@@ -8,6 +8,10 @@
     "url": "https://danijelgrabez.com"
   },
   "publisher": "danijel-grabez",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danijelgrabez/transliterate.git"
+  },
   "license": "MIT",
   "version": "0.0.1",
   "engines": {
