@@ -11,5 +11,7 @@ Convert latin characters to cyrilic, and vice versa.
 ### Author
 
 Name: Danijel Grabež
+
 Website: https://www.danijelgrabez.com/
+
 Twitter: @danijel_grabez
