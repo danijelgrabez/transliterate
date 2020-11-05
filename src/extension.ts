@@ -9,14 +9,9 @@ export function activate(context: vscode.ExtensionContext) {
 	const convertSelection = (direction: ConvertDirection)=> {
 		const editor = vscode.window.activeTextEditor;
 
-		console.log('====================================');
-		console.log('called');
-		console.log('====================================');
-
 		if (editor) {
 			const document = editor.document;
 			editor.edit(editBuilder => {
-
 					editor.selections.forEach(sel => {
 							const range = sel.isEmpty ? document.getWordRangeAtPosition(sel.start) || sel : sel;
 							let word = document.getText(range);

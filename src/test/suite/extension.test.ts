@@ -20,4 +20,19 @@ suite('Extension Test Suite', () => {
 		assert.strictEqual(remapSelection('данијел', ConvertDirection.toLatin), 'danijel');
 		assert.strictEqual(remapSelection('Danijel', ConvertDirection.toLatin), 'Danijel');
 	});
+
+	test('Special cases', () => {
+		assert.strictEqual(remapSelection('Njiva', ConvertDirection.toCyrilic), 'Њива');
+		assert.strictEqual(remapSelection('njiva', ConvertDirection.toCyrilic), 'њива');
+		assert.strictEqual(remapSelection('NJIVA', ConvertDirection.toCyrilic), 'ЊИВА');
+		assert.strictEqual(remapSelection('Ljubav', ConvertDirection.toCyrilic), 'Љубав');
+		assert.strictEqual(remapSelection('ljubav', ConvertDirection.toCyrilic), 'љубав');
+		assert.strictEqual(remapSelection('LJUBAV', ConvertDirection.toCyrilic), 'ЉУБАВ');
+		assert.strictEqual(remapSelection('Djon', ConvertDirection.toCyrilic), 'Ђон');
+		assert.strictEqual(remapSelection('djon', ConvertDirection.toCyrilic), 'ђон');
+		assert.strictEqual(remapSelection('DJON', ConvertDirection.toCyrilic), 'ЂОН');
+		assert.strictEqual(remapSelection('Džezva', ConvertDirection.toCyrilic), 'Џезва');
+		assert.strictEqual(remapSelection('džezva', ConvertDirection.toCyrilic), 'џезва');
+		assert.strictEqual(remapSelection('DŽEZVA', ConvertDirection.toCyrilic), 'ЏЕЗВА');
+	});
 });
